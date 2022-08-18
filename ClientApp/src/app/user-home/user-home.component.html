@@ -1,0 +1,22 @@
+<p>user-home works!</p>
+<span>
+  ID :
+  {{User.id}}
+</span>
+<span>
+  firstName :
+  {{User.firstName}}
+</span>
+<span>
+  lastName :
+  {{User.lastName}}
+</span>
+<span>
+  Email :
+  {{User.email}}
+</span>
+
+<span>
+  Role :
+  {{User.role==1 ? "Admin" : User.role==2? "User": User.role==3 ? "Guest":""}}
+</span>

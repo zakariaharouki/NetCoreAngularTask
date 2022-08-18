@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+/*@import url(../node_modules/bootstrap/dist/css/bootstrap.css);*/
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: rgba(238, 238, 238, 0.9333333333);
+  box-shadow: -1px 3px 12px 3px #888888;
+}
+
+  .card form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+    .card form input {
+      margin-bottom: 15px;
+    }
+
+    .card form label {
+      text-align: left;
+    }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

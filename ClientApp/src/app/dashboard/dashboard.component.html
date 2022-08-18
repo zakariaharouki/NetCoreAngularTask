@@ -1,0 +1,46 @@
+<link href="../../../font-awesome.css" />
+<p>dashboard works!</p>
+<!--<i class="fa fa-che"></i>-->
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Email</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Role</th>
+      <th>Date of Birth</th>
+      <th>Approved</th>
+
+      <!--<th>Options</th>-->
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let dataItem of UserList">
+      <td>{{dataItem.id}}</td>
+      <td>{{dataItem.email}}</td>
+      <td>{{dataItem.firstName}}</td>
+      <td>{{dataItem.lastName}}</td>
+      <td>
+        {{dataItem.role=="1" ? "Admin" : dataItem.role=="2"? "User": dataItem.role=="3" ? "Guest":""}}
+      </td>
+      <td>{{dataItem.dob}}</td>
+      <td *ngIf="dataItem.isApproved">
+        <mat-icon>check_circle</mat-icon>
+      </td>
+      <td *ngIf="!dataItem.isApproved">
+        <mat-icon>cancel</mat-icon>
+      </td>
+      <td>
+        <button type="button" class="btn btn-primary" (click)="deleteClick(dataItem.id)">Delete</button> <span class="separator">|</span>
+        <button type="button" class="btn btn-primary" (click)="approveClick(dataItem.id)">Approve</button>
+        <!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          (click)="EditStudent(dataItem)">
+    Edit
+  </button>
+  -->
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,17 @@
+<link rel="stylesheet" type="text/css" href="/src/styles.css">
+<div class="container">
+
+  <div class="col-md-4 offset-md-4 card">
+    <div class="card-body">
+      <h2>Login</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onFormSubmit()">
+        <label for="Email">Email</label>
+        <input type="text" class="form-control" formControlName="Email">
+        <label for="Password">Password</label>
+        <input type="password" class="form-control" formControlName="Password">
+        <button type="submit" mat-raised-button color="primary" class=" btn btn-primary" ng-disabled="!loginForm.valid">Login</button>
+      </form>
+    </div>
+  </div>
+</div>
+

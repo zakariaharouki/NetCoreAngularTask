@@ -1,0 +1,30 @@
+/*@import url(../node_modules/bootstrap/dist/css/bootstrap.css);*/
+
+.card {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: rgba(238, 238, 238, 0.9333333333);
+  box-shadow: -1px 3px 12px 3px #888888;
+}
+
+  .card form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+    .card form input {
+      margin-bottom: 15px;
+    }
+
+    .card form label {
+      text-align: left;
+    }
+.btn-primary{
+    margin-top:40px
+}
+.mat-snack-bar-container{
+    margin-bottom:85px!important;
+}
